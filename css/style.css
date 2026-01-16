@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #b3ecf1, #18848e);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* MAin */
+main {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Titulos */
+h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+h3, h4, h5 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Forms */
+.form-group label {
+  font-weight: 600;
+  color: #555;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* botones */
+.btn {
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #1fbdd2 !important;
+  border-color: #1fbdd2 !important;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #18848e !important;
+}
+
+.btn-success {
+  background-color: #2ecc71 !important;
+  border: none;
+}
+
+.btn-warning {
+  background-color: #18848e !important;
+  border-color: #18848e !important;
+  border: none;
+  color: #fff !important;
+}
+
+.btn-secondary {
+  background-color: #81a0a2 !important;
+  border-color: #81a0a2 !important;
+  border: none;
+}
+
+
+
+
+
+/* PAGINASSSS */
+
+/* Menu */
+#saldoMenu {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* Contactos */
+#listaContactos div {
+  background: #f4f6fb;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* transacciones */
+#listaTransacciones {
+  margin-top: 15px;
+}
+
+#listaTransacciones li {
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* Depositar */
+.transaccion-deposito {
+  background-color: #eafaf1;
+  color: #27ae60;
+  border-left: 6px solid #27ae60;
+}
+
+/* Trasnferencia */
+.transaccion-transferencia {
+  background-color: #fdecea;
+  color: #c0392b;
+  border-left: 6px solid #c0392b;
+}
+
+/* conteiner de alertas*/
+#alert-container {
+  margin-top: 10px;
+}
+
+/* Responsividad*/
+@media (max-width: 480px) {
+  main {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
