@@ -171,7 +171,34 @@ $(document).ready(function () {
 
     }
 
-    
+    // TRANSACCIONES
+    if ($("#listaTransacciones").length) {
+        const transacciones = JSON.parse(localStorage.getItem("transacciones")) || [];
+
+        if ($("#listaTransacciones").length) {
+            $("#listaTransacciones").empty();
+
+            transacciones.forEach(t => {
+
+                let clase = '';
+                let texto = '';
+
+                if (t.tipo === 'Deposito') {
+                    clase = 'transaccion-deposito';
+                    texto = `${t.detalle} - $${t.monto}`;
+                }
+
+                if (t.tipo === 'Transferencia') {
+                    clase = 'transaccion-transferencia';
+                    texto = ` ${t.detalle} - $${t.monto}`;
+                }
+
+                $('#listaTransacciones').append(`
+                <li class="list-group-item ${clase}">${texto} </li>`);
+            });
+
+        }
+    }
 
     function mostrarAlerta(mensaje, tipo) {
         $('#alert-container').html(`
@@ -181,7 +208,17 @@ $(document).ready(function () {
     `);
     }
 
+    function guardarTransaccion(tipo, monto, detalle) {
+        const transacciones = JSON.parse(localStorage.getItem("transacciones")) || [];
+
+        const transaccion = {
+            tipo: tipo,
+            monto: monto,
+            detalle: detalle,
+            fecha: new Date().toLocaleString()
+        };
+
+        transacciones.push(transaccion);
+        localStorage.setItem("transacciones", JSON.stringify(transacciones));
+    }
 });
-
-
-
